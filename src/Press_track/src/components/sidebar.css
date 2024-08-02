@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    transition: margin-left 0.3s;
+}
+
+.sidebar {
+    width: 200px; /* Width when open */
+    height: 100%;
+    background: #1a733f; /* Green background */
+    color: white;
+    transition: width 0.3s; /* Smooth transition */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-closed .sidebar {
+    width: 50px; /* Width when closed */
+}
+
+.top_section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #27ae60; /* Slight border for separation */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: opacity 0.3s; /* Smooth opacity transition */
+}
+
+.bars {
+    cursor: pointer;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.link:hover {
+    background: #043a05fa;
+    box-shadow: inset 5px 0 0 #1e8449;
+    color: white;
+}
+
+.icon {
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.link:hover .icon {
+    color: #d4efdf; /* Change icon color on hover */
+}
+
+.link_text {
+    margin-left: 20px;
+    font-size: 16px;
+    transition: opacity 0.3s; /* Smooth opacity transition */
+}
+
+.sidebar-open .link_text {
+    opacity: 1; /* Show text when sidebar is open */
+}
+
+.sidebar-closed .link_text {
+    opacity: 0; /* Hide text when sidebar is closed */
+}
+
+main {
+    margin-left: 200px; /* Leave space for the sidebar */
+    transition: margin-left 0.3s; /* Smooth transition */
+}
+
+.sidebar-closed + main {
+    margin-left: 50px; /* Adjust margin when sidebar is closed */
+}
