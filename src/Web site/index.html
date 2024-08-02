@@ -1,76 +1,733 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
-    <style>
-        /* Basic styling for the webpage */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Star Publishers</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpeg" rel="icon">
+ 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My Simple Website</h1>
-    </header>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+      <h1 class="logo">
+        <img src="assets/img/logo.jpeg" >
+        <a href="index.html">Star Publishers</a>
+      </h1>
+     
 
-    <!-- Main Content Section -->
-    <main>
-        <h2>About This Website</h2>
-        <p>This is a basic HTML template for a simple website. It includes a header, navigation menu, main content area, and a footer.</p>
-        <p>You can use this template as a starting point for creating your own website. Customize the content, style, and structure to suit your needs.</p>
-    </main>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#placeorder">Place Order</a></li>
+          <li><a class="nav-link scrollto " href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 My Simple Website. All rights reserved.</p>
-    </footer>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(assets/img/printingshop-1.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to Star Publishers</h2>
+                <h4 class="animate__animated animate__fadeInDown">Where Quality Meets Creativity</h4>
+                <p class="animate__animated animate__fadeInUp">Step into a world where printing dreams come to life. At Star Publishers, we blend innovation with precision to deliver exceptional print solutions tailored to your needs. Explore our range of services and let your imagination run wild.</p>
+                <div>
+                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  <a href="#placeorder" class="btn-get-started animate__animated animate__fadeInUp scrollto">Place New Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url(assets/img/printing.jpeg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Your Printing Partner</h2>
+                <h4 class="animate__animated animate__fadeInDown">Bringing Ideas to Life</h4>
+                <p class="animate__animated animate__fadeInUp">Partner with us and bring your ideas to life. Whether you're a business looking to make a statement or an individual with a creative vision, we're here to turn your concepts into reality. With state-of-the-art equipment and a passion for excellence, we're more than just a printing shop—we're your creative partner.</p>
+                
+                <div>
+                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  <a href="#placeorder" class="btn-get-started animate__animated animate__fadeInUp scrollto">Place New Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url(assets/img/printingshop-2.png);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Precision Printing Services</h2>
+                <h4 class="animate__animated animate__fadeInDown">Crafted with Care</h4>
+                <p class="animate__animated animate__fadeInUp">Experience the difference with our precision printing services. From business cards to banners, we pay meticulous attention to detail to ensure every print meets our high standards. Our team of experts is dedicated to delivering perfection, one print at a time.</p>
+                <div>
+                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  <a href="#placeorder" class="btn-get-started animate__animated animate__fadeInUp scrollto">Place New Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>About Us</h3>
+              <p>
+                Located in Maradana, Star Publishers is a leading name in the printing industry. With a team of 20 dedicated professionals, we've earned a reputation for top-notch quality and reliability.
+              </p>
+              <div class="row">
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Our Commitment</h4>
+                  <p>We're dedicated to excellence, earning the trust of diverse clients through our quality service.</p>
+                </div>
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Innovation</h4>
+                  <p>We stay ahead with innovative solutions like our "Price Estimation, Stock Management & Order Processing System."</p>
+                </div>
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-images"></i>
+                  <h4>Our Vision</h4>
+                  <p>We strive to be industry leaders, maintaining strong customer connections through innovation and efficiency.</p>
+                </div>
+                <div class="col-md-6 icon-box">
+                  <i class="bx bx-shield"></i>
+                  <h4>Pushing Boundaries</h4>
+                  <p>We drive industry changes, aiming to exceed expectations and deliver unparalleled value.
+
+                  </p>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span>500+</span> 
+              <p><strong>Happy Clients</strong> satisfied with our services</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span>750+</span> 
+              <p><strong>Projects</strong> completed with precision and expertise</p>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-clock"></i>
+              <span>Mon-Sat: 9:00 AM - 6:00 PM</span><br>
+              
+              <p><strong>Opening Hours</strong> Our shop is open on weekdays and Saturdays for your convenience.</p>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span>15+</span> 
+              <p><strong>Hard Workers</strong> dedicated to delivering excellence</p>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    
+
+   <!-- ======= Place Order Section ======= -->
+<section id="placeorder" class="placeorder">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Place Order</h2>
+      <p>Ready to bring your ideas to life? Simply fill out the form below to place your order and get started on your printing project today!</p>
+    </div>
+
+    <form action="/submit_order" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="service_type">Service Type:</label>
+        <select id="service_type" name="service_type" class="form-control" required onchange="toggleServiceOptions()">
+          <option value="">Select Service Type</option>
+          <option value="printing">Printing</option>
+          <option value="laminating">Laminating</option>
+          <option value="binding">Binding</option>
+        </select>
+      </div>
+
+      <!-- Printing Options -->
+      <div id="printing_options" class="service-options" style="display: none;">
+        <div class="form-group">
+          <label for="printing_type">Printing Type:</label>
+          <select id="printing_type" name="printing_type" class="form-control">
+            <option value="">Select Printing Type</option>
+            <option value="offset">Offset Printing</option>
+            <option value="digital">Digital Printing</option>
+            <option value="large_format">Large Format Printing</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="paper_type">Paper Type:</label>
+          <select id="paper_type" name="paper_type" class="form-control">
+            <option value="">Select Paper Type</option>
+            <option value="matte">Matte</option>
+            <option value="glossy">Glossy</option>
+            <option value="cardstock">Cardstock</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="color_option">Color Option:</label>
+          <select id="color_option" name="color_option" class="form-control">
+            <option value="">Select Color Option</option>
+            <option value="black_white">Black & White</option>
+            <option value="color">Color</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" class="form-control" min="1" >
+        </div>
+        <div class="form-group">
+          <label for="design_file">Upload Design (PDF, JPEG, PNG, AI, PSD):</label>
+          <input type="file" id="design_file" name="design_file" accept=".pdf,.jpeg,.jpg,.png,.ai,.psd" class="form-control-file">
+        </div>
+      </div>
+
+      <!-- Laminating Options -->
+      <div id="laminating_options" class="service-options" style="display: none;">
+        <div class="form-group">
+          <label for="laminating_thickness">Laminating Thickness:</label>
+          <select id="laminating_thickness" name="laminating_thickness" class="form-control">
+            <option value="">Select Thickness</option>
+            <option value="3mil">3 mil</option>
+            <option value="5mil">5 mil</option>
+            <option value="10mil">10 mil</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="laminating_finish">Laminating Finish:</label>
+          <select id="laminating_finish" name="laminating_finish" class="form-control">
+            <option value="">Select Finish</option>
+            <option value="glossy">Glossy</option>
+            <option value="matte">Matte</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="laminating_quantity">Quantity:</label>
+          <input type="number" id="laminating_quantity" name="quantity" class="form-control" min="1">
+        </div>
+      </div>
+
+      <!-- Binding Options -->
+      <div id="binding_options" class="service-options" style="display: none;">
+        <div class="form-group">
+          <label for="binding_type">Binding Type:</label>
+          <select id="binding_type" name="binding_type" class="form-control">
+            <option value="">Select Binding Type</option>
+            <option value="comb">Comb Binding</option>
+            <option value="spiral">Spiral Binding</option>
+            <option value="thermal">Thermal Binding</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pages">Number of Pages:</label>
+          <input type="number" id="pages" name="pages" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="cover_type">Cover Type:</label>
+          <select id="cover_type" name="cover_type" class="form-control">
+            <option value="">Select Cover Type</option>
+            <option value="plastic">Plastic</option>
+            <option value="cardboard">Cardboard</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="binding_quantity">Quantity:</label>
+          <input type="number" id="binding_quantity" name="quantity" class="form-control" min="1">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="additional_info">Additional Information:</label>
+        <textarea id="additional_info" name="additional_info" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Place Order</button>
+      <a href="/check_status" class="btn btn-secondary">Check Order Status</a>
+    </form>
+
+  </div>
+</section><!-- End Place Order Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+    
+        <div class="section-title">
+          <h2>Why Choose Us</h2>
+          <p>Discover why we are your best choice for all your printing needs. We pride ourselves on delivering top-notch quality and exceptional service.</p>
+        </div>
+    
+        <div class="row">
+    
+          <div class="col-lg-4">
+            <div class="box">
+              <span>01</span>
+              <h4>High-Quality Prints</h4>
+              <p>Experience crisp, vibrant prints that make your designs come to life. We use state-of-the-art technology and premium materials to ensure superior quality.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>02</span>
+              <h4>Fast Turnaround Time</h4>
+              <p>Need your prints in a hurry? Count on us for quick turnaround times without compromising on quality. We understand deadlines and deliver on time, every time.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>03</span>
+              <h4>Custom Solutions</h4>
+              <p>Every project is unique, and we tailor our printing solutions to meet your specific needs. Whether it's custom sizes, special finishes, or unique materials, we've got you covered.</p>
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section><!-- End Why Us Section -->
+    
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Explore the wide range of printing services we offer to bring your ideas to life.</p>
+        </div>
+
+        
+
+        <div class="row services-container">
+
+          <div class="col-lg-4 col-md-6 services-item filter-app">
+            <div class="services-wrap">
+              <img src="assets/img/services/service-1.png" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Offset Printing</h4>
+                <p>High-quality printing suitable for medium to large volume orders such as brochures, flyers, and posters.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-web">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-2.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Digital Printing</h4>
+                <p>Quick and cost-effective printing solution for small to medium volume orders with fast turnaround times, ideal for items like business cards, invitations, and leaflets.</p>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-app">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-3.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Large Format Printing</h4>
+                <p>Produce large format prints including banners, signage, and posters for events, promotions, and advertising.</p>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-card">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-4.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Binding Services</h4>
+                <p>Offer various binding options such as spiral binding, comb binding, and saddle stitching for reports, manuals, and booklets.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-web">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-5.jpeg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Laminating Services</h4>
+                <p>Provide laminating services to protect and enhance the durability of documents, ID cards, and certificates.</p>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-app">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-6.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Custom Stationery Printing</h4>
+                <p>Print personalized stationery items such as letterheads, envelopes, and notepads for businesses and individuals.</p>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-card">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-7.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Packaging Printing</h4>
+                <p>Print custom packaging solutions including boxes, labels, and tags for product branding and marketing.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-card">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-8.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Variable Data Printing</h4>
+                <p>Offer variable data printing services for personalized direct mail campaigns, event invitations, and promotional materials.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 services-item filter-web">
+            <div class="services-wrap">
+              <img src="assets/img/services/services-9.jpg" class="img-fluid" alt="">
+              <div class="services-info">
+                <h4>Event Ticket Printing</h4>
+                <p>Print custom-designed event tickets for concerts, parties, and other events, with options for numbering and security features.</p>
+               
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End services Section -->
+
+    
+
+   
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>If you have any queries, please refer to the following frequently asked questions. If your question is not answered here, feel free to contact us for assistance.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What types of files do you accept for printing <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  We accept a variety of file formats for printing, including PDF, JPEG, PNG, AI, and PSD. Please ensure your files are high-resolution and properly formatted for optimal printing results.
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What is the turnaround time for printing orders? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Turnaround times may vary depending on the complexity and volume of the job. We also offer expedited printing options for urgent requests.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Can I request a sample or proof before printing? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Absolutely! We encourage customers to request a sample or proof of their print job before proceeding with the full order. This allows you to review the design and ensure accuracy before finalizing the printing process.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Do you offer bulk printing discounts? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, we offer discounts for bulk printing orders. The more you print, the more you save. Please contact us for pricing details and minimum order quantities.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What is your policy on reprints or refunds for printing errors? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Customer satisfaction is our top priority. If there are any printing errors or discrepancies, please notify us, and we'll work to resolve the issue promptly. We offer reprints or refunds as per our quality assurance policy.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>If you have any questions or inquiries, feel free to reach out to us using the contact information provided below. We're here to assist you!</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>Maradana, SriLanka</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+94 123456789</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">starpublishers@sl.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Star Publishers</h3>
+              <p>
+                Maradana, SriLanka<br><br>
+                <strong>Phone:</strong> +94 123456789<br>
+                <strong>Email:</strong> starpublishers@sl.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Offset Printing</a></li>
+               <li><i class="bx bx-chevron-right"></i> <a href="#services">Digital Printing</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#services">Large Format Printing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#services">Binding</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#services">Laminating</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#services">Custom Stationery Printing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#services">Packaging Printing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#services">Variable Data Printing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#services">Event Ticket Printing</a></li>
+          </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to stay updated on the latest printing trends, special offers, and promotions!</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+   
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ <!-- Vendor JS Files -->
+ <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+ <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+ <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+
+  
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
