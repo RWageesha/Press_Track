@@ -1,0 +1,73 @@
+.vreports-container {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vreports-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To space out the header text and the back icon */
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #6CB660;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vreports-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.back-icon {
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.back-icon:hover {
+    color: #fff;
+}
+
+.vreports-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* One column grid */
+    gap: 20px; /* Space between grid items */
+    width: 80%;
+    max-width: 900px;
+    justify-items: center;
+}
+
+.vreport-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #c4e9c4;
+    color: #333; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-decoration: none; /* Remove link underline */
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make sure the card fits within the grid */
+    text-align: center; /* Center the text */
+    cursor: pointer;
+}
+
+.vreport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Elevates the card on hover */
+    background-color: #6CB660;
+    color: white;
+}

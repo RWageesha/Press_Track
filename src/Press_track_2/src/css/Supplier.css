@@ -1,0 +1,103 @@
+.supplier-container {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.supplier-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #6CB660;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.supplier-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+  
+.filter-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.filter-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+  
+.apply-btn {
+    padding: 10px;
+    background-color: #28b72e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.apply-btn:hover{
+    background-color: #0e5311;  
+}
+.supplier-list-section {
+    width: 100%;
+    max-width: 900px;
+    background-color: #eaf7ea;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px;
+}
+  
+.supplier-list-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #6cb660;
+}
+  
+.supplier-list {
+    display: flex;
+    flex-direction: column;
+}
+  
+.supplier-item {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+  
+.supplier-item:hover {
+    background-color: #d0e8d0;
+}
+  
+.supplier-list-section::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.supplier-list-section::-webkit-scrollbar-thumb {
+    background-color: #28b72e;
+    border-radius: 10px;
+}
