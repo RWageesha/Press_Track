@@ -1,0 +1,46 @@
+/* sidebar.css */
+
+.sidebar {
+    width: 200px;
+    background-color: #1a733f;
+    height: 100vh;
+    position: fixed;
+    top: 60px; /* Adjust to match the height of your navbar */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Add some padding to space out the items */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.link .icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.link:hover {
+    background: #126820;
+    box-shadow: inset 5px 0 0 #1e8449;
+    color: white;
+}
+
+.link.active {
+    background: #043a05fa;
+    box-shadow: inset 5px 0 0 #1e8449;
+}

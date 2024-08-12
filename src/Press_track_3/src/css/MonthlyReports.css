@@ -1,0 +1,102 @@
+.mreports-container {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mreports-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #6CB660;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Allows absolute positioning of back icon */
+}
+
+.mreports-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    flex: 1; /* Centers the title */
+    text-align: center;
+}
+
+.back-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.back-icon:hover {
+    color: #fff;
+}
+
+.year-select-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.year-select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mreports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+    justify-items: center;
+}
+
+.mreport-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #c4e9c4;
+    color: #333; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-decoration: none; /* Remove link underline */
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make sure the card fits within the grid */
+    text-align: center; /* Center the text */
+    cursor: pointer;
+}
+
+.mreport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Elevates the card on hover */
+    background-color: #6CB660;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .mreports-grid {
+        grid-template-columns: 1fr; /* Stacks the grid items on smaller screens */
+    }
+}

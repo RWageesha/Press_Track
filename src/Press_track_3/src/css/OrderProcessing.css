@@ -1,0 +1,112 @@
+.order-processing-container {
+    margin-left: 200px; /* Aligns with the sidebar */
+    margin-top: 60px; /* Aligns below the navbar */
+    padding: 20px;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+}
+
+.order-processing-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #c7e8c8; /* Light green background for the header */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.order-processing-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #28b72e; /* Bright green text color */
+}
+
+.back-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: black; /* Color for the back icon */
+    text-decoration: none;
+}
+
+.order-processing-content {
+    width: 80%;
+    max-width: 900px;
+    background-color: #eaf7ea;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.department-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.department {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #28b72e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.department p {
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+
+.active .icon-circle {
+    background-color: yellow; /* Highlight active department */
+}
+
+.line {
+    width: 2px;
+    height: 40px;
+    background-color: #28b72e;
+    margin-left: 19px; /* Align line with the icons */
+}
+
+.active-line {
+    background-color: yellow;
+}
+
+.finish-order-btn {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.finish-order-btn:hover {
+    background-color: #27ae60;
+}

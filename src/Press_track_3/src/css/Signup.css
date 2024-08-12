@@ -1,0 +1,68 @@
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 100%;
+    background-image: url('../images/background.jpeg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 600px;
+}
+
+.signup-box .logo {
+    width: 50px;
+    margin: 0 auto 20px auto; 
+    display: block; 
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-box .signup-btn,
+.signup-box .login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-box .signup-btn {
+    background-color: #6CB660;
+    color: white;
+    font-size: 1rem;
+}
+
+.signup-box .login-btn {
+    background-color: #ccc;
+    color: black;
+    font-size: 1rem;
+}
+
+.signup-box .signup-btn:hover,
+.signup-box .login-btn:hover {
+    opacity: 0.9;
+}
+
+.signup-box p {
+    margin: 20px 0 10px;
+    font-size: 1rem;
+}

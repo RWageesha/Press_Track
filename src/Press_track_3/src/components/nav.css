@@ -1,0 +1,63 @@
+.header-nav ul {
+    list-style: none;
+  }
+  
+  .header-nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-nav .nav-icon {
+    font-size: 22px;
+    color: #012970;
+    margin-right: 25px;
+    position: relative;
+  }
+  
+  .header-nav .nav-profile {
+    color: #012970;
+  }
+  
+  .header-nav .nav-profile img {
+    max-height: 36px;
+  }
+  
+  .header-nav .nav-profile span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .header-nav .badge-number {
+    position: absolute;
+    inset: -2px -5px auto auto;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+  
+  .header-nav .notifications,
+  .header-nav .messages {
+    inset: 8px -15px auto auto !important;
+  }
+  
+  .header-nav .notifications .notification-item,
+  .header-nav .messages .message-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    transition: 0.3s;
+  }
+  
+  .header-nav .notifications .notification-item i,
+  .header-nav .messages .message-item i {
+    margin: 0 20px 0 10px;
+    font-size: 24px;
+  }
+  
+  .header-nav .notifications .notification-item:hover,
+  .header-nav .messages .message-item:hover {
+    background-color: #f6f9ff;
+  }
+  
