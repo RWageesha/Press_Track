@@ -1,0 +1,116 @@
+.printing-container {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.printing-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #6CB660;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.printing-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.back-icon {
+    position: absolute;
+    right: 20px;
+    font-size: 2.5rem;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.back-icon:hover {
+    color: #fff;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.order-table {
+    width: 100%;
+    max-width: 900px;
+    background-color: #eaf7ea;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.order-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.ongoing-status {
+    color: green;
+}
+
+.finished-status {
+    color: black;
+}
+
+.ongoing-dot, .finished-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.ongoing-dot {
+    background-color: green;
+}
+
+.finished-dot {
+    background-color: black;
+}

@@ -1,0 +1,74 @@
+.finished-order-container {
+    margin-left: 200px; /* Aligns with the sidebar */
+    margin-top: 60px; /* Aligns below the navbar */
+    padding: 20px;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finished-order-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between title and back button */
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #6CB660; /* Background color for the title */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.finished-order-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff; /* White color for the title text */
+}
+
+.back-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem; /* Increase size of the back icon */
+    color: black;
+    text-decoration: none;
+}
+
+.back-icon:hover {
+    color: #fff;
+}
+
+.order-table {
+    background-color: #eaf7ea;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust the width to make it more centered */
+    overflow-x: auto;
+}
+
+.order-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.order-table tr:hover {
+    background-color: #f1f1f1;
+}

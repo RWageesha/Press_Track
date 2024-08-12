@@ -1,0 +1,85 @@
+.sections-container {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.sections-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #6CB660;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.sections-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #7fec6f; /* Background color for the big box */
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    justify-items: center;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.section-button {
+    background-color: #d9f9d4;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Fixed width for consistency */
+    height: 150px; /* Fixed height for consistency */
+}
+
+.section-button img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+  
+.section-button p {
+    color: rgb(5, 5, 5);
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+}
+  
+.section-button:hover {
+    transform: scale(1.05);
+    background-color: #2ecc71;
+
+}
+.section-button p:hover {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+}
+  

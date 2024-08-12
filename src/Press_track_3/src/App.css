@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+/*------------------------------------------------------
+# General Styles
+--------------------------------------------------------*/
+
+:root {
+  scroll-behavior: smooth;
+  --primary: #4154f1;
+  --second: #717ff5;
+  --bgColor: #f6f9ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+  background: var(--bgColor);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--second);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+/*------------------------------------------------------
+# Dropdown Menus
+--------------------------------------------------------*/
+
+.dropdown-menu {
+  border-radius: 4px;
+  padding: 10px;
+  animation: dropdown-animate 0.2s both;
+  border: 0;
+  box-shadow: 0 5px 30px rgba(82, 63, 105, 0.2);
+  position: absolute; /* Ensures the dropdown appears above other content */
+  z-index: 1000; /* Ensures the dropdown is on top */
+}
+
+.dropdown-menu .dropdown-header,
+.dropdown-menu .dropdown-footer {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 25px;
+}
+
+.dropdown-menu .dropdown-footer a {
+  color: #444444;
+  text-decoration: underline;
+}
+
+.dropdown-menu .dropdown-footer a:hover {
+  text-decoration: none;
+}
+
+.dropdown-menu .dropdown-divider {
+  margin: 0;
+  border-top: 1px solid #a5c5fe;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 14px;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu .dropdown-item i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f6f9ff;
+}
+
+@media(min-width: 760px) {
+  .dropdown-menu-arrow::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    transform: rotate(45deg);
+    border-top: 1px solid #eaedf1;
+    border-left: 1px solid #eaedf1;
+    z-index: 1001; /* Ensure the arrow is above other content */
+  }
+}
+
+/*------------------------------------------------------
+# Animations
+--------------------------------------------------------*/
+
+@keyframes dropdown-animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
