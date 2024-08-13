@@ -7,6 +7,7 @@ const customerData = [
   { id: '003', name: 'Sunil Jayawardena', address: 'No. 78, Matara Road, Galle', email: 'sunil@example.com', contact: '+94 75 234 5678' },
   { id: '004', name: 'Anura Wijesinghe', address: 'No. 90, Peradeniya Road, Peradeniya', email: 'anura@example.com', contact: '+94 77 456 7890' },
   { id: '005', name: 'Samanthi Senanayake', address: 'No. 10, Kurunegala Road, Kurunegala', email: 'samanthi@example.com', contact: '+94 72 678 9012' },
+  { id: '006', name: 'Erandi Malawala', address: 'No. 2, Pitigala Road, Wewaldeniya', email: 'erandi@example.com', contact: '+94 70 980 4567' },
 ];
 
 const Customers = () => {
