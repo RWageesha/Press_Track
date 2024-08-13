@@ -1,0 +1,64 @@
+.orders-header {
+    margin-top: 70px; /* Space for the navbar */
+    padding: 20px; /* Padding around the header */
+    font-size: 28px; /* Larger font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Dark gray color for the text */
+    background-color: #f4f4f4; /* Light background color for contrast */
+    border: 3px solid #043a05fa; /* Dark green border for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center; /* Center align text */
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .orders-header {
+        font-size: 24px;
+        padding: 15px;
+    }
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+/* Stat Card */
+.stat-card {
+    margin-top: 20px;
+    background-color: #03542edf; /* Medium green */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stat Card Text */
+.stat-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    margin: 10px 0 0;
+}
+
+/* Charts Container */
+.charts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chart {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+

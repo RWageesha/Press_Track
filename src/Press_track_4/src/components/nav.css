@@ -1,0 +1,221 @@
+/* General List Styles */
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common Styles for Nav Items */
+.header-nav .nav-item {
+    position: relative;
+}
+
+/* Icon Styles */
+.header-nav .nav-icon,
+.header-nav .nav-settings-icon,
+.header-nav .nav-profile i {
+    font-size: 22px;
+    color: #043a05fa; /* Icon color */
+    margin-right: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+}
+
+/* Icon Hover Styles */
+.header-nav .nav-icon:hover,
+.header-nav .nav-settings-icon:hover,
+.header-nav .nav-profile i:hover {
+    color: #1e8449; /* Icon color on hover */
+}
+
+/* Badge Styles */
+.header-nav .nav-icon .badge-number {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #043a05fa; /* Badge background color */
+    color: #ffffff; /* Badge text color */
+    font-size: 12px; /* Badge font size */
+    padding: 3px 6px;
+    border-radius: 50%; /* Circular badge */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Badge Hover Styles */
+.header-nav .nav-icon:hover .badge-number {
+    background-color: #1e8449; /* Badge color on hover */
+}
+
+/* Profile Styles */
+.header-nav .nav-profile {
+    display: flex;
+    align-items: center;
+    color: #043a05fa; /* Profile text color */
+}
+
+.header-nav .nav-profile img {
+    max-height: 36px;
+    border-radius: 50%; /* Circular profile image */
+}
+
+/* Profile Text Styles */
+.header-nav .nav-profile span {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px; /* Spacing between image and text */
+}
+
+/* Dropdown Styles for Notifications and Messages */
+.header-nav .dropdown-menu {
+    background-color: #fff; /* Background color for dropdowns */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Notification and Message Item Styles */
+.header-nav .notifications .notification-item,
+.header-nav .messages .message-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    transition: background-color 0.3s;
+}
+
+/* Notification and Message Item Icon Styles */
+.header-nav .notifications .notification-item i,
+.header-nav .messages .message-item img {
+    margin: 0 20px 0 10px;
+}
+
+/* Icon Color in Notifications */
+.header-nav .notifications .notification-item i {
+    font-size: 24px;
+    color: #043a05fa; /* Icon color */
+}
+
+/* Notification Title Styles */
+.header-nav .notifications .notification-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #043a05fa; /* Title color */
+}
+
+/* Notification and Message Text Styles */
+.header-nav .notifications .notification-item p,
+.header-nav .messages .message-item p {
+    font-size: 13px;
+    color: #919191;
+}
+
+/* Notification and Message Item Hover Styles */
+.header-nav .notifications .notification-item:hover,
+.header-nav .messages .message-item:hover {
+    background-color: #f6f9ff; /* Background color on hover */
+}
+
+/* Messages Image Styles */
+.header-nav .messages .message-item img {
+    max-height: 40px;
+    border-radius: 50%; /* Circular profile image */
+}
+
+/* Message Item Title Styles */
+.header-nav .messages .message-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444444;
+}
+
+/* Profile Dropdown Styles */
+.header-nav .profile {
+    min-width: 240px;
+    padding-bottom: 0;
+}
+
+/* Profile Dropdown Header Styles */
+.header-nav .profile .dropdown-header h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444444;
+}
+
+/* Profile Dropdown Subheader Styles */
+.header-nav .profile .dropdown-header span {
+    font-size: 14px;
+}
+
+/* Profile Dropdown Item Styles */
+.header-nav .profile .dropdown-item {
+    font-size: 14px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+/* Profile Dropdown Item Icon Styles */
+.header-nav .profile .dropdown-item i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Profile Dropdown Item Hover Styles */
+.header-nav .profile .dropdown-item:hover {
+    background-color: #f6f9ff; /* Background color on hover */
+}
+
+/* Modal Styles */
+.settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Content Styles */
+.settings-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Header Styles */
+.settings-modal-content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #043a05fa; /* Header color */
+    margin: 0;
+}
+
+/* Modal Text Styles */
+.settings-modal-content p {
+    font-size: 14px;
+    color: #919191;
+    margin: 10px 0;
+}
+
+/* Modal Button Styles */
+.settings-modal-content button {
+    background-color: #043a05fa; /* Button color */
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Modal Button Hover Styles */
+.settings-modal-content button:hover {
+    background-color: #1e8449; /* Button color on hover */
+}

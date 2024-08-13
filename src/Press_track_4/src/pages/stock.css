@@ -1,0 +1,21 @@
+.orders-header {
+    margin-top: 70px; 
+    padding: 20px; 
+    font-size: 28px; 
+    font-weight: bold; 
+    color: #333; 
+    background-color: #f4f4f4; 
+    border: 3px solid #043a05fa; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+    text-align: center; 
+}
+
+
+@media (max-width: 768px) {
+    .orders-header {
+        font-size: 24px; 
+        padding: 15px; 
+    }
+}
+

@@ -1,0 +1,20 @@
+.orders-header {
+    margin-top: 70px; /* Space for the navbar */
+    padding: 20px; /* Padding around the header */
+    font-size: 28px; /* Larger font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Dark gray color for the text */
+    background-color: #f4f4f4; /* Light background color for contrast */
+    border: 3px solid #043a05fa; /* Dark green border for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center; /* Center align text */
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .orders-header {
+        font-size: 24px; /* Slightly smaller font size on smaller screens */
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+}
