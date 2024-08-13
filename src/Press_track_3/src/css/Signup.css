@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     background-image: url('../images/background.jpeg'); /* Ensure this path is correct */
     background-size: cover;
@@ -12,7 +12,7 @@
 
 .signup-box {
     background-color: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -20,7 +20,7 @@
 }
 
 .signup-box .logo {
-    width: 50px;
+    width: 70px;
     margin: 0 auto 20px auto; 
     display: block; 
 }
@@ -66,3 +66,4 @@
     margin: 20px 0 10px;
     font-size: 1rem;
 }
+

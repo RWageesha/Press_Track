@@ -19,7 +19,7 @@ function Logo() {
             
        
         </a>
-        <h4>DashBoard</h4>
+        <h4>Press Track</h4>
         </div>
   )
 }

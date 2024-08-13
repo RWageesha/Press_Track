@@ -22,28 +22,32 @@ const Stock = () => {
         <h2>STOCK</h2>
       </div>
       <div className="order-table">
+        <div className='row'>
+          <div className="col-md-3 search-container">
+            <input type="text" placeholder="Search" className="search-input" />
+            <i className="bi bi-search search-icon"></i>
+          </div>
+          <div className='col-md-2 justify-content-end'>
+            <button className='btn btn-primary btn-sm '>Add New<i className='fa fa-plus'></i></button>
+          </div>
+        </div>
+
         <table>
           <thead>
             <tr>
               <th>id</th>
               <th>Item name</th>
               <th>Quality</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="search-row">
-              <td colSpan="3">
-                <div className="search-container">
-                  <input type="text" placeholder="Search" className="search-input" />
-                  <i className="bi bi-search search-icon"></i>
-                </div>
-              </td>
-            </tr>
             {items.map((item) => (
               <tr key={item.id} onClick={() => handleRowClick(item.id)}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.quality}</td>
+                <td><i className='fa fa-trash text-danger'></i></td>
               </tr>
             ))}
           </tbody>

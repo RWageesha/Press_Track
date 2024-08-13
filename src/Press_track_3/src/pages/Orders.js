@@ -4,10 +4,10 @@ import '../css/Order.css';
 
 const Orders = () => {
   return (
-    <div className="orders-container">
-      <div className="orders-header">
+    <div className="orders-container justify-content-center">
+      {/* <div className="orders-header">
         <h2>Orders</h2>
-      </div>
+      </div> */}
       <div className="orders-grid">
         <Link to="/orders/new" className="order-card">New Order</Link>
         <Link to="/orders/confirmed" className="order-card">Confirmed Order</Link>

@@ -35,7 +35,14 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <div className="signup-box">
-        <img src={logo} alt="Logo" className="logo" />
+        <div className='row justify-content-center align-items-center'>
+          <div className='col-md-2'>
+            <img src={logo} alt="Logo" className="logo" />
+          </div>
+          <div className='col-md-4'>
+            <h4 className="mb-3">Press Track</h4>
+          </div>
+        </div>
         <input
           type="text"
           name="fullName"
@@ -81,8 +88,10 @@ const Signup = () => {
         <button onClick={handleSignUp} className="signup-btn">Sign Up</button>
         <p>Or</p>
         <button onClick={handleLogin} className="login-btn">Login</button>
+        <p className='text-secondary'>Powered by Press Track</p>
       </div>
     </div>
+
   );
 };
 

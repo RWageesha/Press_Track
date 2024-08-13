@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../css/Supplier.css'; // Make sure to create this CSS file
 
 const suppliersList = [
-  'Amal',
-  'Kamal',
-  'Sunil',
-  'Nimal',
-  'Nayana',
-  'Amara',
+  'Amal Wijesooriya',
+  'Kamal Hewagama',
+  'Sunil Jayaweera',
+  'Nimal Rathnasena',
+  'Nayana Senadeera',
+  'Devin Hapuarachchi',
 ];
 
 const Supplier = () => {

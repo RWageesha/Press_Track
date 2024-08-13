@@ -45,7 +45,6 @@
 .search-container {
     display: flex;
     align-items: center;
-    width: 100%;
     max-width: 900px;
     background-color: white;
     border-radius: 20px;

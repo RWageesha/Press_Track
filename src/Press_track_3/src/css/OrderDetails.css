@@ -85,7 +85,7 @@
 .drop-box {
     width: 100%;
     padding: 20px;
-    background-color: #28b72e;
+    background-color: #82ed88;
     border-radius: 10px;
     color: white;
     margin-bottom: 20px;
@@ -105,7 +105,7 @@
 }
   
 .dropbox-icons button {
-    background-color: #28b72e;
+    background-color: #81c884;
     border: none;
     cursor: pointer;
     padding: 5px;

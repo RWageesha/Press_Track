@@ -42,7 +42,7 @@
 .stock-item-content {
     width: 80%;
     max-width: 900px;
-    background-color: #eaf7ea;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,7 +52,7 @@
 }
 
 .quantity-section {
-    background-color: #28b72e;
+    background-color: #82ed88;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -88,7 +88,7 @@
 }
 
 .suppliers-section, .cart-section {
-    background-color: #28b72e;
+    background-color: #82ed88;
     padding: 20px;
     border-radius: 10px;
     color: white;
