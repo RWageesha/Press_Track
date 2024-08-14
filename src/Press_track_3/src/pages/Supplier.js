@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../css/Supplier.css'; // Make sure to create this CSS file
 
 const suppliersList = [
-  'Amal Wijesooriya',
-  'Kamal Hewagama',
-  'Sunil Jayaweera',
-  'Nimal Rathnasena',
-  'Nayana Senadeera',
-  'Devin Hapuarachchi',
+  'item# - Amal Wijesooriya                   ',
+  'item# - Kamal Hewagama                      ',
+  'item# - Sunil Jayaweera',
+  'item# - Nimal Rathnasena',
+  'item# - Nayana Senadeera',
+  'item# - Devin Hapuarachchi',
 ];
 
 const Supplier = () => {
