@@ -9,10 +9,10 @@ const Orders = () => {
         <h2>Orders</h2>
       </div> */}
       <div className="orders-grid">
-        <Link to="/orders/new" className="order-card">New Order</Link>
-        <Link to="/orders/confirmed" className="order-card">Confirmed Order</Link>
-        <Link to="/orders/processing" className="order-card">Processing Order</Link>
-        <Link to="/orders/finished" className="order-card">Finished Order</Link>
+        <Link to="/orders/new" className="order-card-1">New Order</Link>
+        <Link to="/orders/confirmed" className="order-card-2">Confirmed Order</Link>
+        <Link to="/orders/processing" className="order-card-3">Processing Order</Link>
+        <Link to="/orders/finished" className="order-card-4">Finished Order</Link>
       </div>
     </div>
   );

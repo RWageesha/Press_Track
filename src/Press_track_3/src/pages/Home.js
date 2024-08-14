@@ -29,19 +29,19 @@ const Home = () => {
       {
         label: 'Income',
         data: incomeData,
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+        backgroundColor: 'rgba(56,142,60,0.6)',
       },
       {
         label: 'Expenses',
         data: expenseData,
-        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+        backgroundColor: 'rgba(76,175,80,0.6)',
       },
     ],
   };
 
   return (
     <div className="home-container">
-      <h2>Dashboard</h2>
+      <h2>Home</h2>
       <div className="stats-container">
         <div className="stat-card">
           <h3>Customers</h3>

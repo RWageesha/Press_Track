@@ -10,7 +10,7 @@
     align-items: center;
 }
   
-.sections-header {
+/* .sections-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
     background-color: #6CB660;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
   
 .sections-header h2 {
     margin: 0;
@@ -33,7 +33,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: #7fec6f; /* Background color for the big box */
+    background-color: #0c5b0d; /* Background color for the big box */
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     justify-items: center;

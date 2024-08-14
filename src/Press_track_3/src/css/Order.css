@@ -38,7 +38,7 @@
     justify-items: center;
 }
 
-.order-card {
+.order-card-1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,70 @@
     width: 100%; /* Make sure the card fits within the grid */
     text-align: center; /* Center the text */
 }
-
+.order-card-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #043a05fa; /* Green background */
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make sure the card fits within the grid */
+    text-align: center; /* Center the text */
+}
+.order-card-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #1e8449; /* Green background */
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make sure the card fits within the grid */
+    text-align: center; /* Center the text */
+}
+.order-card-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #3b9d20; /* Green background */
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make sure the card fits within the grid */
+    text-align: center; /* Center the text */
+}
+.order-card-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #4CAF50; /* Green background */
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make sure the card fits within the grid */
+    text-align: center; /* Center the text */
+}
 .order-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
