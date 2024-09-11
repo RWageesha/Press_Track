@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import userIcon from '../images/userIcon.png'; 
 function NavAvatar() {
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ function NavAvatar() {
       <a className="nav-link nav-profile d-flex align-items-center pe-0"
          href="/profile" 
          data-bs-toggle="dropdown">
-        <img src="images/user.jpg" alt="Profile" className="rounded-circle" />
+        <img src={userIcon} alt="Profile" class=" rounded-circle" />
         <span className="d-none d-md-block dropdown-toggle ps-2">F.David</span>
       </a>
 

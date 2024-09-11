@@ -29,7 +29,7 @@ const Supplier = () => {
   return (
     <div className="supplier-container">
       <div className="supplier-header">
-        <h2>Supplier</h2>
+        <h2>SUPPLIERS</h2>
       </div>
       <div className="filter-section">
         <input
@@ -44,7 +44,7 @@ const Supplier = () => {
         </button>
       </div>
       <div className="supplier-list-section">
-        <h3>All Suppliers</h3>
+       
         <div className="supplier-list">
           {filteredSuppliers.map((supplier, index) => (
             <div key={index} className="supplier-item">

@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
 }
 
 .customers-header {
@@ -16,11 +17,13 @@
     justify-content: center;
     position: relative;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    background-color: #6CB660;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #023618;
+    border-radius: 8px;
+    border: 2px solid #043a05fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Smooth transition for header changes */
 }
 
 .customers-header h2 {
@@ -29,6 +32,7 @@
     color: #fff;
     flex: 1;
     text-align: center;
+    transition: font-size 0.3s ease; /* Smooth transition for font size changes */
 }
 
 .back-icon {
@@ -37,6 +41,7 @@
     font-size: 2.5rem;
     color: #333;
     cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition for icon color changes */
 }
 
 .back-icon:hover {
@@ -44,7 +49,7 @@
 }
 
 .customers-table {
-    width: 80%;
+    width: 100%;
     max-width: 1000px;
     background-color: #eaf7ea;
     padding: 20px;
@@ -52,11 +57,15 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 300px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease; /* Smooth transition for table changes */
 }
 
 .customers-table table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+    transition: width 0.3s ease; /* Smooth transition for table width changes */
 }
 
 .customers-table th,
@@ -64,13 +73,16 @@
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    transition: padding 0.3s ease, font-size 0.3s ease; /* Smooth transition for padding and font size changes */
 }
 
 .customers-table th {
-    background-color: #333;
+    background-color: #235347;
     color: #fff;
 }
 
 .customers-table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #d0e8d0;
 }
+

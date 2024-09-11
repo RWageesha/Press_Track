@@ -12,7 +12,7 @@ const New = () => {
   return (
     <div className="new-order-container">
       <div className="new-order-header">
-        <h2>New Orders</h2>
+        <h2>NEW ORDERS</h2>
         <Link to="/orders" className="back-icon1">
           <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
         </Link>

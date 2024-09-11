@@ -14,7 +14,7 @@ const Customers = () => {
   return (
     <div className="customers-container">
       <div className="customers-header">
-        <h2>Customers</h2>
+        <h2>CUSTOMERS</h2>
       </div>
       <div className="customers-table">
         <table>

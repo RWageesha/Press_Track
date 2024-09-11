@@ -1,13 +1,15 @@
 .stock-container {
-    margin-left: 200px; /* Aligns with the sidebar */
-    margin-top: 60px; /* Aligns below the navbar */
+
+    margin-left: 200px;
+    margin-top: 60px;
     padding: 20px;
-    height: calc(100vh - 60px); /* Full height minus navbar height */
-    background-color: #f8f9fa;
+    height: calc(100vh - 60px);
+    background-color: white; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+  
 }
 
 .stock-header {
@@ -15,11 +17,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    background-color: #6CB660; /* Background color for the title */
+    background-color: #023618; /* Matching green background */
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #043a05fa; /* Matching border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Matching shadow */
 }
 
 .stock-header h2 {
@@ -49,7 +52,7 @@
 }
 
 .order-table th {
-    background-color: #333;
+    background-color: #235347;
     color: #fff;
 }
 

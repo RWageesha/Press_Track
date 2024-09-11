@@ -27,7 +27,7 @@ const Sections = () => {
 
   return (
     <div className="sections-container">
-      
+              <div className="sections-header"><h2>SECTIONS</h2></div>
       <div className="sections-grid">
         {sections.map((section) => (
           <div 

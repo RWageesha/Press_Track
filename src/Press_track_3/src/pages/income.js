@@ -18,7 +18,7 @@ const Income = () => {
     <div className="income-container">
       <div className="income-header">
         <h2>Incomes</h2>
-        <Link to="/reports" className="back-icon">
+        <Link to="/revenue" className="back-icon">
           <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
         </Link>
       </div>

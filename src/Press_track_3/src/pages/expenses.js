@@ -18,7 +18,7 @@ const Expenses = () => {
     <div className="expenses-container">
       <div className="expenses-header">
         <h2>Expenses</h2>
-        <Link to="/reports" className="back-icon">
+        <Link to="/revenue" className="back-icon">
           <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
         </Link>
       </div>

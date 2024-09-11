@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .reports-header {
@@ -15,11 +16,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    background-color: #6CB660;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #023618; /* Matching green background */
+    border-radius: 8px;
+    border: 2px solid #043a05fa; /* Matching border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .reports-header h2 {
@@ -28,25 +30,17 @@
     color: #fff;
 }
 
-.reports-box {
-    width: 80%;
-    max-width: 900px;
-    padding: 20px;
-    background-color: #7fec6f;
-    border-radius: 20px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .reports-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px; /* Space between grid items */
-    width: 100%;
-    justify-items: center;
+    width: 80%;
+    justify-content: center;
+    max-width: 900px;
     margin-top: 20px;
+    transition: all 0.3s ease; /* Smooth transition for responsiveness */
 }
 
 .report-card {
@@ -54,16 +48,16 @@
     align-items: center;
     justify-content: center;
     height: 150px;
-    background-color: #c4e9c4;
-    color: #333; 
+    background-color: #0a6c0ada;
+    color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-decoration: none; /* Remove link underline */
     transition: transform 0.3s, box-shadow 0.3s;
     width: 100%; /* Make sure the card fits within the grid */
-    text-align: center; /* Center the text */
+    text-align: center; 
 }
 
 .report-card:hover {
@@ -74,7 +68,18 @@
 }
 
 @media (max-width: 768px) {
+    .reports-container {
+        padding: 20px;
+        height: fix-content;
+    }
+
     .reports-grid {
-        grid-template-columns: 1fr; /* Stacks the grid items on smaller screens */
+        grid-template-columns: 1fr; /* Stack the grid items on smaller screens */
+        width: 100%;
+    }
+
+    .report-card {
+        height: 100px; /* Adjust card height for smaller screens */
+        font-size: 1.2rem;
     }
 }

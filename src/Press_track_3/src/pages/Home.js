@@ -12,6 +12,7 @@ const Home = () => {
 
   const barOptions = {
     responsive: true,
+   
     plugins: {
       legend: {
         position: 'top',
@@ -29,19 +30,19 @@ const Home = () => {
       {
         label: 'Income',
         data: incomeData,
-        backgroundColor: 'rgba(56,142,60,0.6)',
+        backgroundColor: 'rgba(34,139,34,0.8)',
       },
       {
         label: 'Expenses',
         data: expenseData,
-        backgroundColor: 'rgba(76,175,80,0.6)',
+        backgroundColor: 'rgba(50,205,50,0.8)',
       },
     ],
   };
 
   return (
     <div className="home-container">
-      <h2>Home</h2>
+    <div className="home-header"><h2>HOME</h2></div> 
       <div className="stats-container">
         <div className="stat-card">
           <h3>Customers</h3>

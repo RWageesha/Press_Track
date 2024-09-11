@@ -17,7 +17,7 @@
     margin-bottom: 20px;
     padding: 10px 20px;
     width: 100%;
-    background-color: #6CB660; /* Background color for the title */
+    background-color:#136207; /* Background color for the title */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -34,13 +34,13 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2.5rem; /* Increase size of the back icon */
-    color: black;
+    font-size: 2.25rem; /* Increase size of the back icon */
+    color: #fff;
     text-decoration: none;
 }
 
 .back-icon:hover {
-    color: #fff;
+    color: #ADEBB3;
 }
 
 .order-table {
@@ -65,7 +65,7 @@
 }
 
 .order-table th {
-    background-color: #333;
+    background-color: #136207;
     color: #fff;
 }
 

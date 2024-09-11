@@ -1,63 +1,114 @@
 .header-nav ul {
-    list-style: none;
-  }
-  
-  .header-nav > ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .header-nav .nav-icon {
-    font-size: 22px;
-    color: #012970;
-    margin-right: 25px;
-    position: relative;
-  }
-  
-  .header-nav .nav-profile {
-    color: #012970;
-  }
-  
-  .header-nav .nav-profile img {
-    max-height: 36px;
-  }
-  
-  .header-nav .nav-profile span {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  .header-nav .badge-number {
-    position: absolute;
-    inset: -2px -5px auto auto;
-    font-weight: normal;
-    font-size: 12px;
-    padding: 3px 6px;
-  }
-  
-  .header-nav .notifications,
-  .header-nav .messages {
-    inset: 8px -15px auto auto !important;
-  }
-  
-  .header-nav .notifications .notification-item,
-  .header-nav .messages .message-item {
-    display: flex;
-    align-items: center;
-    padding: 15px 10px;
-    transition: 0.3s;
-  }
-  
-  .header-nav .notifications .notification-item i,
-  .header-nav .messages .message-item i {
-    margin: 0 20px 0 10px;
-    font-size: 24px;
-  }
-  
-  .header-nav .notifications .notification-item:hover,
-  .header-nav .messages .message-item:hover {
-    background-color: #f6f9ff;
-  }
-  
+  list-style: none;
+}
+
+.header-nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav .nav-icon {
+  font-size: 22px;
+  color: #0A5D29; /* Dark Green for icons */
+  margin-right: 25px;
+  position: relative;
+}
+
+.header-nav .nav-profile {
+  color: #0A5D29; /* Dark Green for profile text */
+}
+
+.header-nav .nav-profile img {
+  max-height: 36px;
+}
+
+.header-nav .nav-profile span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #34495E; /* Dark Gray for profile name */
+}
+
+.header-nav .badge-number {
+  position: absolute;
+  inset: -2px -5px auto auto;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 3px 6px;
+  background-color: #D4AC0D; /* Yellow-Green for badge */
+  color: white; /* White text for contrast */
+  border-radius: 12px;
+}
+
+.header-nav .notifications,
+.header-nav .messages {
+  inset: 8px -15px auto auto !important;
+}
+
+.header-nav .notifications .notification-item,
+.header-nav .messages .message-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  transition: 0.3s;
+  background-color: #F2F4F4; /* Off-White for item background */
+  color: #224225; /* Dark Gray for text */
+}
+
+.header-nav .notifications .notification-item i,
+.header-nav .messages .message-item i
+ {
+  margin: 0 20px 0 10px;
+  font-size: 24px;
+  color: #132812; 
+}
+
+.header-nav .messages .message-item p{
+  font-size: 15px;
+  color: #132812; 
+}
+.header-nav .notifications .notification-item:hover,
+.header-nav .messages .message-item:hover {
+  background-color: #a0d499; /* Light Green on hover */
+}
+
+
+.nav-profile {
+  color: #043a05fa; /* Green color for the profile link text */
+  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-profile:hover {
+  color: #1e8449; /* Darker green on hover */
+}
+
+.profile-image {
+  width: 40px; /* Size of the profile image */
+  height: 40px;
+  border: 2px solid #043a05fa; /* Green border */
+  padding: 2px; /* Optional: Add padding to make the border more prominent */
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-profile:hover .profile-image {
+  border-color: #1e8449; /* Change border color on hover */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.profile-name {
+  margin-left: 10px; /* Space between the image and name */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #043a05fa; /* Same green as the link text */
+}
+
+.nav-profile:hover .profile-name {
+  color: #1e8449; /* Change text color on hover */
+}
+
+.custom-badge {
+  background-color: #126f27; /* Your desired background color */
+  color: #fff; /* Text color */
+}

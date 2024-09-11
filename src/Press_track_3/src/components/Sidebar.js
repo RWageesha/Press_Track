@@ -4,6 +4,7 @@ import {
     FaBox,
     FaRegListAlt,
     FaTruck,
+    FaMoneyBillWave,
     FaChartBar,
     FaUsers, 
     FaHome 
@@ -12,14 +13,17 @@ import { NavLink } from 'react-router-dom';
 import './sidebar.css';
 
 const Sidebar = () => {
+    
     const menuItem = [
         { path: '/Home', name: 'Home', icon: <FaHome /> }, 
         { path: '/orders', name: 'Orders', icon: <FaFileAlt /> },
         { path: '/stock', name: 'Stock', icon: <FaBox /> },
         { path: '/sections', name: 'Sections', icon: <FaRegListAlt /> },
         { path: '/supplier', name: 'Supplier', icon: <FaTruck /> },
+        { path: '/revenue', name: 'Revenue', icon: <FaMoneyBillWave /> }, 
         { path: '/reports', name: 'Reports', icon: <FaChartBar /> },
-        { path: '/customers', name: 'Customers', icon: <FaUsers /> } // Adding the Customers button
+        { path: '/customers', name: 'Customers', icon: <FaUsers /> } 
+       
     ];
 
     return (

@@ -3,7 +3,7 @@
     margin-top: 60px;
     padding: 20px;
     height: calc(100vh - 60px);
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Keeping a light background */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -15,18 +15,18 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    background-color: #6CB660;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #043a05fa; /* Using a consistent green color */
+    border-radius: 8px;
+    border: 2px solid #023618; /* Matching the border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Maintaining a subtle shadow */
 }
 
 .orders-header h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #fff;
-    text-align: center;
+    color: #fff; /* White text color for good contrast */
 }
 
 .orders-grid {
@@ -38,28 +38,11 @@
     justify-items: center;
 }
 
-.order-card-1 {
+.order-card-1, .order-card-2, .order-card-3, .order-card-4 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 150px;
-    background-color: #91c988; /* Green background */
-    color: #050505;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Make sure the card fits within the grid */
-    text-align: center; /* Center the text */
-}
-.order-card-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    background-color: #043a05fa; /* Green background */
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
@@ -67,66 +50,58 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Make sure the card fits within the grid */
+    width: 100%; /* Ensures full width in the grid */
     text-align: center; /* Center the text */
 }
+
+/* Specific color updates for each order card to match stock.css */
+
+.order-card-1 {
+    background-color: #001d00; /* Deep Forest Green */
+}
+
 .order-card-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    background-color: #1e8449; /* Green background */
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Make sure the card fits within the grid */
-    text-align: center; /* Center the text */
+    background-color: #003200; /* Moss Green */
 }
+
 .order-card-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    background-color: #3b9d20; /* Green background */
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Make sure the card fits within the grid */
-    text-align: center; /* Center the text */
+    background-color: #004900; /* Olive Green */
 }
+
 .order-card-4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    background-color: #4CAF50; /* Green background */
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Make sure the card fits within the grid */
-    text-align: center; /* Center the text */
+    background-color: #136207; /* Soft Sage Green */
 }
-.order-card:hover {
+
+
+
+.order-card-1:hover,
+.order-card-2:hover,
+.order-card-3:hover,
+.order-card-4:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #6CB660;
+    background-color: #318e20; /* Hover state for consistency */
     color: white;
 }
 
 @media (max-width: 768px) {
+    .orders-container {
+        
+        padding: 20px;
+        height: auto;
+    }
+
     .orders-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack the grid items on smaller screens */
+        width: 100%;
+    }
+
+.order-card-1,
+.order-card-2,
+.order-card-3,
+.order-card-4  {
+        height: 100px; /* Adjust card height for smaller screens */
+        font-size: 1.2rem;
     }
 }
+

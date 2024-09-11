@@ -17,9 +17,10 @@
     margin-bottom: 20px;
     padding: 10px 20px;
     width: 100%;
-    background-color: #6CB660; /* Background color for the title */
+    background-color: #003200; /* Background color for the title */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
   
 .confirmed-order-header h2 {
@@ -28,15 +29,18 @@
     color: #fff; /* White color for the title text */
   }
   
-.back-icon1 {
-    font-size: 2.5rem; /* Increase size of the back icon */
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
+a.back-icon1 {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.25rem; /* Increase size of the back icon */
+  color: #fff;
+  text-decoration: none;
   }
   
-.back-icon1:hover {
-    color: #fff;
+a.back-icon1:hover {
+  color: #ADEBB3;
   }
 
 .order-table {
@@ -60,7 +64,7 @@
   }
   
 .order-table th {
-    background-color: #333;
+    background-color: #003200;
     color: #fff;
   }
   

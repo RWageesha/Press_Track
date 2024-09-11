@@ -5,14 +5,14 @@ function NavNotice() {
     <li className="nav-item dropdown">
       <a className="nav-link nav-icon" href="/Notice" data-bs-toggle="dropdown">
        <i className="bi bi-bell"></i>
-        <span className="badge bg-primary badge-number">4</span>
+        <span className="badge bg-success badge-number">4</span>
       </a>
 
       <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
         <li className="dropdown-header">
           You have 4 new notifications
           <a href ="/Notice">
-            <span className="badge rounded-pill bg-primary p-2 ms-2">
+            <span className="badge rounded-pill custom-badge p-2 ms-2">
             view all
             </span>
           </a>

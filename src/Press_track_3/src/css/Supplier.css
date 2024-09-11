@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
   
 .supplier-header {
@@ -15,11 +16,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    background-color: #6CB660;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #023618; /* Matching green background */
+    border-radius: 8px;
+    border: 2px solid #043a05fa; /* Matching border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
   
 .supplier-header h2 {
@@ -48,7 +50,7 @@
   
 .apply-btn {
     padding: 10px;
-    background-color: #28b72e;
+    background-color: #1c7520;
     color: white;
     border: none;
     border-radius: 5px;
@@ -62,7 +64,7 @@
 .supplier-list-section {
     width: 100%;
     max-width: 900px;
-    background-color: #eaf7ea;
+    background-color:  #eaf7ea;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);

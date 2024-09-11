@@ -13,7 +13,7 @@ function NavMessage() {
         <li className="dropdown-header">
           You have 3 new messages
           <a href="/massage">
-            <span className="badge rounded-pill bg-primary p-2 ms-2">View all</span>
+            <span className="badge rounded-pill custom-badge p-2 ms-2">View all</span>
           </a>
           
         </li>

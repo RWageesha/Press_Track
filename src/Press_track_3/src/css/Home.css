@@ -1,55 +1,116 @@
 /* Home.css */
 .home-container {
-    margin-left: 200px;
-    margin-top: 60px;
-    padding: 20px;
-    height: calc(100vh - 60px);
-    background-color: #f8f9fa;
-    box-sizing: border-box;
+  margin-left: 200px;
+  margin-top: 60px;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  background-color: white; 
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease, padding 0.3s ease; /* Smooth transitions for margin and padding */
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  width: 100%;
+  background-color: #023618; /* Matching green background */
+  border-radius: 8px;
+  border: 2px solid #043a05fa; /* Matching border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Matching shadow */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions for background and border color */
+}
+
+.home-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff; /* White color for the title text */
+  transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between; /* Adjusted to space-around for better responsiveness */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #03542edf;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
+  margin: 10px; /* Space between cards */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for background color, transform, and shadow */
+}
+
+.stat-card:hover {
+  background-color: #023618; /* Darker background on hover */
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevate the card on hover */
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+.stat-card p {
+  font-size: 2rem;
+  margin: 10px 0 0;
+  transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+.charts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chart {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+@media (max-width: 1200px) {
+  .home-header h2 {
+    font-size: 1.2rem; /* Adjust header font size */
   }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .stats-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-  }
-  
+
   .stat-card {
-    background-color: #03542edf;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Adjust card size for medium screens */
   }
-  
-  .stat-card h3 {
-    margin: 0;
-    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin-left: 0; /* Remove left margin on small screens */
+    padding: 10px; /* Reduce padding */
   }
-  
-  .stat-card p {
-    font-size: 2rem;
-    margin: 10px 0 0;
+
+  .home-header h2 {
+    font-size: 1rem; /* Further adjust header font size */
   }
-  
-  .charts-container {
-    display: flex;
-    justify-content: center;
+
+  .stats-container {
+    flex-direction: column; /* Stack cards vertically on small screens */
     align-items: center;
-    flex-direction: column;
   }
-  
+
+  .stat-card {
+    flex: 1 1 80%; /* Adjust card size for small screens */
+  }
+
   .chart {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 90%; /* Adjust chart width for small screens */
   }
-  
+}

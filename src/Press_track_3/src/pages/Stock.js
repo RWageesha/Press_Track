@@ -18,9 +18,7 @@ const Stock = () => {
 
   return (
     <div className="stock-container">
-      <div className="stock-header">
-        <h2>STOCK</h2>
-      </div>
+        <div className="stock-header"><h2>STOCK</h2></div> 
       <div className="order-table">
         <div className='row'>
           <div className="col-md-3 search-container">
