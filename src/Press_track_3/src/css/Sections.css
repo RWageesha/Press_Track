@@ -2,13 +2,12 @@
     margin-left: 200px;
     margin-top: 60px;
     padding: 20px;
-    height: calc(100vh - 60px);
-    background-color: #f8f9fa;
+    height: calc(200vh - 60px);
+    background-color:white; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
 .sections-header {
@@ -22,14 +21,15 @@
     border-radius: 8px;
     border: 2px solid #043a05fa; /* Matching border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sections-header h2 {
     margin: 0;
     font-size: 1.5rem;
     color: #fff;
-    transition: font-size 0.3s ease;
+    flex: 1;
+    text-align: center;
+    
 }
 
 .sections-grid {
@@ -43,25 +43,10 @@
     justify-items: center;
     width: 80%;
     max-width: 1000px;
-    transition: padding 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
-/* Responsive grid for smaller screens */
-@media (max-width: 768px) {
-    .sections-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-        gap: 15px;
-        transition: grid-template-columns 0.3s ease, gap 0.3s ease;
-    }
-}
 
-@media (max-width: 480px) {
-    .sections-grid {
-        grid-template-columns: 1fr; /* 1 column for small screens */
-        gap: 10px;
-        transition: grid-template-columns 0.3s ease, gap 0.3s ease;
-    }
-}
 
 .section-button {
     background-color: #d9f9d4;
@@ -78,22 +63,6 @@
     height: 150px; /* Fixed height for consistency */
 }
 
-/* Responsive button sizing */
-@media (max-width: 768px) {
-    .section-button {
-        width: 70px; /* Smaller button for medium screens */
-        height: 70px;
-        transition: width 0.3s ease, height 0.3s ease;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-button {
-        width: 50px; /* Smaller button for small screens */
-        height: 50px;
-        transition: width 0.3s ease, height 0.3s ease;
-    }
-}
 
 .section-button img {
     width: 100px;
@@ -101,30 +70,18 @@
     margin-bottom: 10px;
     border-radius: 30px;
     object-fit: cover;
-    transition: width 0.3s ease, height 0.3s ease; /* Smooth image resizing */
+   
 }
 
-/* Adjust image size for smaller buttons */
-@media (max-width: 768px) {
-    .section-button img {
-        width: 70px;
-        height: 70px;
-    }
-}
 
-@media (max-width: 480px) {
-    .section-button img {
-        width: 50px;
-        height: 50px;
-    }
-}
+
 
 .section-button p {
     color: rgb(5, 5, 5);
     font-size: 1rem;
     margin: 0;
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth text color change */
+   
 }
   
 .section-button:hover {
@@ -134,4 +91,18 @@
 
 .section-button p:hover {
     color: white; /* Smooth text color change on hover */
+}
+
+@media (max-width: 768px) {
+    .sections-container {
+
+        padding: 10px;
+        
+    }
+
+    .sections-grid {
+        
+        grid-template-columns: 1fr; /* Stack the grid items on smaller screens */
+        width: 80%;
+    }
 }

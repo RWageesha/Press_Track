@@ -17,7 +17,7 @@ const Income = () => {
   return (
     <div className="income-container">
       <div className="income-header">
-        <h2>Incomes</h2>
+        <h2>INCOMES</h2>
         <Link to="/revenue" className="back-icon">
           <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
         </Link>

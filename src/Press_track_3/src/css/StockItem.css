@@ -15,9 +15,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     width: 100%;
-    background-color: #c7e8c8;
+    background-color:  #001d00;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -26,23 +26,23 @@
 .stock-item-header h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #28b72e;
+    color: #fff;
 }
 
-.back-icon {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5rem;
-    color: black;
+a.back-icon1 {
+    font-size: 2.25rem; /* Increase size of the back icon */
+    font-weight: bold;
+    color: #fff;
     text-decoration: none;
-}
+  }
+  a.back-icon1:hover {
+    color: #ADEBB3;
+  }
 
 .stock-item-content {
     width: 80%;
     max-width: 900px;
-    background-color: #ffffff;
+    background-color:  #eaf7ea;;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,7 +52,7 @@
 }
 
 .quantity-section {
-    background-color: #82ed88;
+    background-color: #7c9b7d;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -88,7 +88,7 @@
 }
 
 .suppliers-section, .cart-section {
-    background-color: #82ed88;
+    background-color: #3a603d;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -174,7 +174,7 @@
 }
 
 .quantity-btn:hover {
-    background-color: #27ae60;
+    background-color: #438760;
 }
 
 .add-to-cart-btn {
@@ -189,5 +189,5 @@
 }
 
 .add-to-cart-btn:hover {
-    background-color: #27ae60;
+    background-color: #438760;
 }

@@ -12,7 +12,11 @@ import Orders from './pages/Orders';
 import NewOrder from './pages/new'; 
 import ConfirmedOrder from './pages/confirmed'; 
 import ProcessingOrder from './pages/processing'; 
-import FinishedOrder from './pages/finished';   
+import FinishedOrder from './pages/finished';  
+import OrderDetails from './pages/OrderDetails'; 
+import OrderDetails1 from './pages/OrderDetails1';
+import OrderProcessing from './pages/OrderProcessing';
+import OrderFinished from './pages/OrderFinished';
 
 import Stock from './pages/Stock';
 import StockItem from './pages/StockItem';
@@ -50,17 +54,28 @@ function App() {
     <div className="app-container">
       <BrowserRouter>
         <Routes>
+          {/* Login and Signup routes */}
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+         
+          {/* Home route */}
           <Route path="/home" element={<ProtectedRoute component={Home} />} />
+          
+          {/* Protected routes that require login */}
           <Route path="/orders" element={<ProtectedRoute component={Orders} />} />
           <Route path="/orders/new" element={<ProtectedRoute component={NewOrder} />} />
           <Route path="/orders/confirmed" element={<ProtectedRoute component={ConfirmedOrder} />} />
           <Route path="/orders/processing" element={<ProtectedRoute component={ProcessingOrder} />} />
           <Route path="/orders/finished" element={<ProtectedRoute component={FinishedOrder} />} />
+          <Route path="/orders/details/:orderId" element={<ProtectedRoute component={OrderDetails} />} />
+          <Route path="/orders/details1/:orderId" element={<ProtectedRoute component={OrderDetails1} />} />
+          <Route path="/orders/processing/:orderId" element={<ProtectedRoute component={OrderProcessing} />} />
+          <Route path="/orders/finished/:orderId" element={<ProtectedRoute component={OrderFinished} />} />
+          
           <Route path="/stock" element={<ProtectedRoute component={Stock} />} />
           <Route path="/stock/:itemId" element={<ProtectedRoute component={StockItem} />} />
+          
           <Route path="/sections" element={<ProtectedRoute component={Sections} />} />
           <Route path="/sections/printing" element={<ProtectedRoute component={Printing} />} />
           <Route path="/sections/binding" element={<ProtectedRoute component={Binding} />} />
@@ -68,10 +83,13 @@ function App() {
           <Route path="/sections/cutting" element={<ProtectedRoute component={Cutting} />} />
           <Route path="/sections/packing" element={<ProtectedRoute component={Packing} />} />
           <Route path="/sections/folding" element={<ProtectedRoute component={Folding} />} />
+          
           <Route path="/supplier" element={<ProtectedRoute component={Supplier} />} />
+          
           <Route path="/revenue" element={<ProtectedRoute component={Revenue} />} />
           <Route path="/revenue/income" element={<ProtectedRoute component={Income} />} />
           <Route path="/revenue/expenses" element={<ProtectedRoute component={Expenses} />} />
+          
           <Route path="/reports" element={<ProtectedRoute component={Reports} />} />
           <Route path="/reports/generate" element={<ProtectedRoute component={Generate} />} />
           <Route path="/reports/view" element={<ProtectedRoute component={View} />} />
@@ -80,7 +98,9 @@ function App() {
           <Route path="/view/yearly" element={<ProtectedRoute component={YearlyReportsPage} />} />
           <Route path="/view/monthly/:year/:month" element={<ProtectedRoute component={ReportDisplayPage} />} />
           <Route path="/view/yearly/:year" element={<ProtectedRoute component={ReportDisplayPage} />} />
+          
           <Route path="/customers" element={<ProtectedRoute component={Customers} />} />
+          
           <Route path="/profile" element={<ProtectedRoute component={Profile} />} />
           
         </Routes>

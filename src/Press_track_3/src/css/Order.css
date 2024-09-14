@@ -87,8 +87,8 @@
 @media (max-width: 768px) {
     .orders-container {
         
-        padding: 20px;
-        height: auto;
+        padding: 10px;
+        
     }
 
     .orders-grid {

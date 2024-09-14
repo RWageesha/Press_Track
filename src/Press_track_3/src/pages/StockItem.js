@@ -3,11 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import '../css/StockItem.css'; // Ensure this CSS file exists
 
 const items = [
-  { id: 1, name: 'Item #1', quality: 'Good', quantity: 10 },
-  { id: 2, name: 'Item #2', quality: 'Average', quantity: 45 },
-  { id: 3, name: 'Item #3', quality: 'Average', quantity: 555},
-  { id: 4, name: 'Item #4', quality: 'Average', quantity: 55 },
-  { id: 5, name: 'Item #5', quality: 'Average', quantity: 15 },
+  { id: 1, name: 'ITEM #1', quality: 'Good', quantity: 10 },
+  { id: 2, name: 'ITEM #2', quality: 'Average', quantity: 45 },
+  { id: 3, name: 'ITEM #3', quality: 'Average', quantity: 555},
+  { id: 4, name: 'ITEM #4', quality: 'Average', quantity: 55 },
+  { id: 5, name: 'ITEM #5', quality: 'Average', quantity: 15 },
 ];
 
 const StockItem = () => {

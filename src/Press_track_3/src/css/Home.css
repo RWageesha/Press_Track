@@ -81,25 +81,15 @@
   transition: width 0.3s ease; /* Smooth transition for width */
 }
 
-@media (max-width: 1200px) {
-  .home-header h2 {
-    font-size: 1.2rem; /* Adjust header font size */
-  }
 
-  .stat-card {
-    flex: 1 1 30%; /* Adjust card size for medium screens */
-  }
-}
 
 @media (max-width: 768px) {
   .home-container {
-    margin-left: 0; /* Remove left margin on small screens */
+    
     padding: 10px; /* Reduce padding */
   }
 
-  .home-header h2 {
-    font-size: 1rem; /* Further adjust header font size */
-  }
+  
 
   .stats-container {
     flex-direction: column; /* Stack cards vertically on small screens */
