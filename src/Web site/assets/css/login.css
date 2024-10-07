@@ -1,0 +1,129 @@
+/*--------------------------------------------------------------
+# General Styles for the Page
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    background-color: rgba(0, 0, 0, 0.75); /* Matches header background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container for login form */
+.container {
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Form headings */
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #444444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #444444;
+    font-size: 14px;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+    border-color: #5c9f24; /* Green color on focus */
+    outline: none;
+}
+
+/* Error message styling */
+#error-message {
+    color: #E74C3C; /* Light Red for error messages */
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    background-color: #5c9f24; /* Primary green color */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #6fc02c; /* Lighter green on hover */
+}
+
+/* Optional link styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #5c9f24;
+}
+
+a:hover {
+    color: #74c92d; /* Light green on hover */
+}
+
+/* Back to top button (in case it's reused in login) */
+.back-to-top {
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #5c9f24;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #6fc02c;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

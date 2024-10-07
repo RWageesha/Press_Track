@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Star Publishers</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpeg" rel="icon">
+ 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  
+  <link href="assets/css/order.css " rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+    
+        <h1 class="logo">
+          <img src="assets/img/logo.jpeg" alt="Logo">
+          <a href="index.html">Star Publishers</a>
+        </h1>
+        
+        <nav class="navbar">
+          <!-- Back to Home Button -->
+          <a href="index.html" class="back-home">
+            <i class="bi bi-arrow-left"></i> Back to Home
+          </a>
+        </nav>
+    
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <section id="placeorder" class="placeorder">
+      <div class="container">
+        <div class="section-title">
+          <h2>Place Order</h2>
+          <p>Ready to bring your ideas to life? Simply fill out the form below to place your order and get started on your printing project today!</p>
+        </div>
+    
+        <form action="/submit_order" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="service_type">Order Type:</label>
+            <select id="service_type" name="service_type" class="form-control" required onchange="toggleServiceOptions()">
+              <option value=""> </option>
+              <option value="book">Book</option>
+              <option value="hand_bill">Hand Bill</option>
+              <option value="visiting_card">Visiting Card</option>
+              <option value="file">File</option>
+            </select>
+          </div>
+    
+          <!-- Book Options -->
+          <div id="book_options" class="service-options" style="display: none;">
+            <div class="form-group">
+              <label for="book_type">Book Type:</label>
+              <select id="book_type" name="book_type" class="form-control">
+                <option value="">Select Book Type</option>
+                <option value="offset">Offset Printing</option>
+                <option value="digital">Digital Printing</option>
+                <option value="large_format">Large Format Printing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="paper_type">Paper Type:</label>
+              <select id="paper_type" name="paper_type" class="form-control">
+                <option value="">Select Paper Type</option>
+                <option value="matte">Matte</option>
+                <option value="glossy">Glossy</option>
+                <option value="cardstock">Cardstock</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="color_option">Color Option:</label>
+              <select id="color_option" name="color_option" class="form-control">
+                <option value="">Select Color Option</option>
+                <option value="black_white">Black & White</option>
+                <option value="color">Color</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="book_quantity">Quantity:</label>
+              <input type="number" id="book_quantity" name="quantity" class="form-control" min="1">
+            </div>
+            <!-- Drag-and-drop area -->
+            <div class="form-group">
+              <label for="design_file">Upload Design (PDF, JPEG, PNG, AI, PSD):</label>
+  
+            <!-- Drag and Drop area -->
+            <div id="drop_zone" class="drop-zone">
+            Drag and drop files here or click to upload.
+            </div>
+  
+            <!-- Fallback for browsers without drag-and-drop support -->
+            <input type="file" id="design_file" name="design_file" accept=".pdf,.jpeg,.jpg,.png,.ai,.psd" class="form-control-file" style="display: none;">
+          </div>
+
+          </div>
+    
+          <!-- Hand Bill Options -->
+          <div id="hand_bill_options" class="service-options" style="display: none;">
+            <div class="form-group">
+              <label for="laminating_thickness">Thickness:</label>
+              <select id="laminating_thickness" name="laminating_thickness" class="form-control">
+                <option value="">Select Thickness</option>
+                <option value="3mil">3 mil</option>
+                <option value="5mil">5 mil</option>
+                <option value="10mil">10 mil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="laminating_finish">Finish:</label>
+              <select id="laminating_finish" name="laminating_finish" class="form-control">
+                <option value="">Select Finish</option>
+                <option value="glossy">Glossy</option>
+                <option value="matte">Matte</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="hand_bill_quantity">Quantity:</label>
+              <input type="number" id="hand_bill_quantity" name="quantity" class="form-control" min="1">
+            </div>
+          </div>
+    
+          <!-- Visiting Card Options -->
+          <div id="visiting_card_options" class="service-options" style="display: none;">
+            <div class="form-group">
+              <label for="binding_type">Card Type:</label>
+              <select id="binding_type" name="binding_type" class="form-control">
+                <option value="">Select Card Type</option>
+                <option value="plastic">Plastic</option>
+                <option value="cardboard">Cardboard</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pages">Number of Pages (for folded cards):</label>
+              <input type="number" id="pages" name="pages" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="visiting_card_quantity">Quantity:</label>
+              <input type="number" id="visiting_card_quantity" name="quantity" class="form-control" min="1">
+            </div>
+          </div>
+    
+          <!-- File Options -->
+          <div id="file_options" class="service-options" style="display: none;">
+            <div class="form-group">
+              <label for="file_type">File Type:</label>
+              <select id="file_type" name="file_type" class="form-control">
+                <option value="">Select File Type</option>
+                <option value="plastic">Plastic</option>
+                <option value="cardboard">Cardboard</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="file_quantity">Quantity:</label>
+              <input type="number" id="file_quantity" name="quantity" class="form-control" min="1">
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="additional_info">Additional Information:</label>
+            <textarea id="additional_info" name="additional_info" class="form-control"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Place Order</button>
+          <a href="LogIn.html" class="btn btn-secondary">Check Order Status</a>
+        </form>
+    
+      </div>
+    </section>
+    
+ <!-- Vendor JS Files -->
+ <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+ <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+ <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+
+  
+
+  <!-- Main JS File -->
+  <script src="assets/js/order.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>

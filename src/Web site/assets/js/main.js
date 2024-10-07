@@ -207,15 +207,29 @@
 })()
 
 function toggleServiceOptions() {
+  // Hide all service options by default
   document.querySelectorAll('.service-options').forEach(option => option.style.display = 'none');
+  
+  // Get the selected service type from the dropdown
   const selectedService = document.getElementById('service_type').value;
-  if (selectedService) {
-    document.getElementById(`${selectedService}_options`).style.display = 'block';
+  
+  // Display the corresponding service options if a valid option is selected
+  if (selectedService === 'printing') {
+    document.getElementById('book_options').style.display = 'block';
+  } else if (selectedService === 'laminating') {
+    document.getElementById('hand_bill_options').style.display = 'block';
+  } else if (selectedService === 'binding') {
+    document.getElementById('visiting_card_options').style.display = 'block';
+  } else if (selectedService === 'File') {
+    document.getElementById('file_options').style.display = 'block';
   }
 }
+
+// Ensure the correct options are visible when the page loads
 document.addEventListener('DOMContentLoaded', () => {
   toggleServiceOptions();
 });
+
 
 
 
