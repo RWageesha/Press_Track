@@ -1,20 +1,62 @@
-import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import '../css/StockItem.css'; // Ensure this CSS file exists
-
-const items = [
-  { id: 1, name: 'ITEM #1', quality: 'Good', quantity: 10 },
-  { id: 2, name: 'ITEM #2', quality: 'Average', quantity: 45 },
-  { id: 3, name: 'ITEM #3', quality: 'Average', quantity: 555},
-  { id: 4, name: 'ITEM #4', quality: 'Average', quantity: 55 },
-  { id: 5, name: 'ITEM #5', quality: 'Average', quantity: 15 },
-];
 
 const StockItem = () => {
   const { itemId } = useParams(); // Get itemId from route parameters
-  const item = items.find(item => item.id === parseInt(itemId)); // Find the item based on ID
+  const navigate = useNavigate();
+  
+  const [item, setItem] = useState(null); // State to store item data
+  const [name, setName] = useState('');
+  const [quality, setQuality] = useState('');
+  const [quantity, setQuantity] = useState(1);
 
-  const [quantity, setQuantity] = useState(1); // Initialize quantity state
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        // Make sure the URL is correct. Use template literals to include itemId dynamically.
+        const response = await fetch(`http://localhost:5000/stocks/${itemId}`);
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch item');
+        }
+        
+        const data = await response.json();
+        setItem(data);
+        setName(data.name);
+        setQuality(data.quality);
+        setQuantity(data.quantity || 1); // Default to 1 if no quantity is provided
+      } catch (error) {
+        console.error('Error fetching item:', error);
+      }
+    };
+  
+    fetchItem();
+  }, [itemId]);  // Only re-run the effect if itemId changes
+  
+
+  const handleSave = async () => {
+    const updatedItem = { name, quality, quantity };
+
+    try {
+      const response = await fetch(`http://localhost:5000/stocks/${itemId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedItem),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert('Item updated successfully!');
+        navigate('/stock'); // Navigate back to the stock list
+      } else {
+        alert('Failed to update item.');
+      }
+    } catch (error) {
+      console.error('Error updating item:', error);
+      alert('Error updating item.');
+    }
+  };
 
   // Function to increase quantity
   const handleIncrease = () => {
@@ -26,47 +68,62 @@ const StockItem = () => {
     setQuantity(prevQuantity => (prevQuantity > 1 ? prevQuantity - 1 : 1));
   };
 
+  if (!item) {
+    return <div>Loading...</div>; // Show loading until the item data is fetched
+  }
+
   return (
     <div className="stock-item-container">
       <div className="stock-item-header">
-        <h2>{item.name}</h2>
+        <h2>Edit {item.name}</h2>
         <Link to="/stock" className="back-icon">
           <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
         </Link>
       </div>
       <div className="stock-item-content">
         <div className="quantity-section">
-          <h3>Quantity</h3>
+          <h3>Update Item</h3>
           <div className="quantity-inputs">
-            <input type="text" placeholder="Example: 100" className="quantity-input" />
-            <input type="text" value={item.id} className="quantity-input" readOnly />
-            <input type="text" value={item.name} className="quantity-input" readOnly />
-            <input type="text" value={item.quality} className="quantity-input" readOnly />
+            <div className="form-group">
+              <label>Item Name:</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="quantity-input"
+                style={{ width: 'auto', maxWidth: '100%',}}
+              />
+            </div>
+            <div className="form-group">
+              <label>Quality:</label>
+              <select
+                value={quality}
+                onChange={(e) => setQuality(e.target.value)}
+                className="quantity-input"
+                style={{ width: 'auto', maxWidth: '100%',}}
+              >
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Poor">Poor</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label>Quantity:</label>
+              <input
+                type="number"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+                className="quantity-input"
+                min="1"
+                style={{ width: 'auto', maxWidth: '100%',}}
+              />
+            </div>
           </div>
         </div>
-        <div className="suppliers-cart-section">
-          <div className="suppliers-section">
-            <h3>Suppliers</h3>
-            <div className="suppliers-list">
-              <div className="supplier">Supplier 01</div>
-              <div className="supplier">Supplier 02</div>
-              <div className="supplier">Supplier 03</div>
-            </div>
-          </div>
-          <div className="cart-section">
-            <h3>Cart</h3>
-            <div className="cart-box">
-              <div className="cart-item">{item.name}</div>
-              <div className="quantity-selector">
-                <input type="text" value={quantity} readOnly className="quantity-display" />
-                <div className="quantity-buttons">
-                  <button onClick={handleIncrease} className="quantity-btn">▲</button>
-                  <button onClick={handleDecrease} className="quantity-btn">▼</button>
-                </div>
-              </div>
-              <button className="add-to-cart-btn">Add to cart</button>
-            </div>
-          </div>
+
+        <div className="actions-section">
+          <button className="btn btn-success" onClick={handleSave}>Save</button>
         </div>
       </div>
     </div>
