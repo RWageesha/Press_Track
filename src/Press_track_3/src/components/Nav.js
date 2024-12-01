@@ -9,9 +9,9 @@ function Nav() {
   return (
     <nav className="header-nav ms-auto">
       <ul className="d-flex align-items-center">
-        <NavNotice />
+        {/* <NavNotice />
         <NavMessage />
-        <SettingsIcon />
+        <SettingsIcon /> */}
         <NavAvatar />
       </ul>
     </nav>

@@ -1,70 +1,50 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link and useNavigate for navigation
+import { Link, useNavigate } from 'react-router-dom';
 import '../css/NewOrder.css';
 
 const New = () => {
-  const navigate = useNavigate(); // Hook for programmatic navigation
+  const navigate = useNavigate();
 
-  const handleRowClick = (orderId) => {
-    navigate(`/orders/details/${orderId}`);
+  const handleRowClick = (order) => {
+    navigate(`/orders/details/${order.id}`, { state: order });
   };
+
+  const orders = [
+    { id: 1, name: 'Order #1', dateTime: '2024-08-09 10:00 AM', description: 'Description of Order #1', price: 10, userEmail: "amandi@gmail.com" },
+    { id: 2, name: 'Order #2', dateTime: '2024-08-09 11:00 AM', description: 'Description of Order #2', price: 20, userEmail: "pinipa@gmail.com" },
+    { id: 3, name: 'Order #3', dateTime: '2024-08-09 12:00 PM', description: 'Description of Order #3', price: 15, userEmail: "nikini@gmail.com" },
+    { id: 4, name: 'Order #4', dateTime: '2024-08-09 01:00 PM', description: 'Description of Order #4', price: 18, userEmail: "wageesha@gmail.com" },
+    { id: 5, name: 'Order #5', dateTime: '2024-08-09 02:00 PM', description: 'Description of Order #5', price: 24, userEmail: "vethum@gmail.com" },
+    { id: 6, name: 'Order #6', dateTime: '2024-08-09 03:00 PM', description: 'Description of Order #6', price: 8, userEmail: "amandi@gmail.com" },
+  ];
 
   return (
     <div className="new-order-container">
       <div className="new-order-header">
         <h2>NEW ORDERS</h2>
         <Link to="/orders" className="back-icon1">
-          <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
+          <i className="bi bi-arrow-left-circle"></i>
         </Link>
       </div>
       <div className="order-table">
         <table>
           <thead>
             <tr>
-              <th>id</th>
-              <th>order name</th>
-              <th>date & time</th>
-              <th>description</th>
+              <th>ID</th>
+              <th>Order Name</th>
+              <th>Date & Time</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
-            <tr onClick={() => handleRowClick(1)}>
-              <td>1</td>
-              <td>Order #1</td>
-              <td>2024-08-09 10:00 AM</td>
-              <td>Description of Order #1</td>
-            </tr>
-            <tr onClick={() => handleRowClick(2)}>
-              <td>2</td>
-              <td>Order #2</td>
-              <td>2024-08-09 11:00 AM</td>
-              <td>Description of Order #2</td>
-            </tr>
-            <tr onClick={() => handleRowClick(3)}>
-              <td>3</td>
-              <td>Order #3</td>
-              <td>2024-08-09 12:00 PM</td>
-              <td>Description of Order #3</td>
-            </tr>
-            <tr onClick={() => handleRowClick(4)}>
-              <td>4</td>
-              <td>Order #4</td>
-              <td>2024-08-09 01:00 PM</td>
-              <td>Description of Order #4</td>
-            </tr>
-            <tr onClick={() => handleRowClick(5)}>
-              <td>5</td>
-              <td>Order #5</td>
-              <td>2024-08-09 02:00 PM</td>
-              <td>Description of Order #5</td>
-            </tr>
-            <tr onClick={() => handleRowClick(6)}>
-              <td>6</td>
-              <td>Order #6</td>
-              <td>2024-08-09 03:00 PM</td>
-              <td>Description of Order #6</td>
-            </tr>
-            {/* Add more rows as needed */}
+            {orders.map((order) => (
+              <tr key={order.id} onClick={() => handleRowClick(order)}>
+                <td>{order.id}</td>
+                <td>{order.name}</td>
+                <td>{order.dateTime}</td>
+                <td>{order.description}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

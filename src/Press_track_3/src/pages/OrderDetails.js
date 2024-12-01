@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import '../css/OrderDetails.css';
 
 const OrderDetails = () => {
-  const { orderId } = useParams(); // Get orderId from the route parameters
-  const [activeLayer, setActiveLayer] = useState(1); // State to manage active dropbox layer
+  const { orderId } = useParams();
+  const location = useLocation();
+  const order = location.state || {};
 
-  const handleLayerClick = (layer) => {
-    setActiveLayer(layer);
+  // Function to generate and download the PDF
+  const handleQuotationDownload = async () => {
+    const input = document.getElementById('quotation-preview'); // Element to capture
+    const canvas = await html2canvas(input);
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF();
+    pdf.addImage(imgData, 'PNG', 10, 10, 190, 0); // Adjust image to fit PDF size
+    pdf.save(`Quotation_Order_${orderId}.pdf`);
   };
 
   return (
@@ -15,43 +24,36 @@ const OrderDetails = () => {
       <div className="order-details-header">
         <h2>ORDER {orderId}</h2>
         <Link to="/orders/new" className="back-icon">
-          <i className="bi bi-arrow-left-circle"></i> {/* Back icon */}
+          <i className="bi bi-arrow-left-circle"></i>
         </Link>
       </div>
       <div className="order-details-content">
         <div className="order-details-box">
-          <p>Order Details</p>
+          <h3>Order Details</h3>
         </div>
-        <div className="order-actions">
-          <button className="design-btn">
-            <i className="bi bi-pencil-square"></i> Design
-          </button>
-          <button className="update-design-btn">Update the Design</button>
-          <button className="send-to-dept-btn">Send to Design Department</button>
-        </div>
-        <div className="drop-box">
-          <div className="dropbox-icons">
-            <button onClick={() => handleLayerClick(1)} className={activeLayer === 1 ? 'active' : ''}>
-              <i className="bi bi-book"></i>
-            </button>
-            <button onClick={() => handleLayerClick(2)} className={activeLayer === 2 ? 'active' : ''}>
-              <i className="bi bi-save"></i>
-            </button>
-          </div>
-          <div className="dropbox-content">
-            {activeLayer === 1 ? <p>Layer 1 Content</p> : <p>Layer 2 Content</p>}
+        <div className="container my-5">
+          <div id="quotation-preview" className="card"> {/* ID for PDF generation */}
+            <div className="card-body">
+              <p><strong>ID:</strong> {order.id}</p>
+              <p><strong>Name:</strong> {order.name}</p>
+              <p><strong>Customer Email:</strong> {order.userEmail}</p>
+              <p><strong>Date & Time:</strong> {order.dateTime}</p>
+              <p><strong>Description:</strong> {order.description}</p>
+              <p><strong>Total:</strong> ${order.price}</p>
+
+            </div>
           </div>
         </div>
         <div className="order-final-actions">
           <div className="button-group">
-            <button className="send-quotation-btn">
-              <i className="bi bi-envelope"></i> Send Quotation
+            <button onClick={handleQuotationDownload} className="ok-btn">
+              Download PDF
             </button>
-            <button className="dropdown-btn">
+            {/* <button className="dropdown-btn">
               <i className="bi bi-caret-down-fill"></i>
-            </button>
+            </button> */}
           </div>
-          <button className="ok-btn">Ok</button>
+          <button className="ok-btn">Send Quotation</button>
         </div>
       </div>
     </div>
